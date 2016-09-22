@@ -1,8 +1,8 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var MapboxClient = require('mapbox/lib/services/datasets');
-var dataset = 'citd4ic0i006v2smigzc46pyh';
-var DATASETS_BASE = 'https://api.mapbox.com/datasets/v1/planemad/' + dataset + '/';
-var mapboxAccessDatasetToken = 'sk.eyJ1IjoicGxhbmVtYWQiLCJhIjoiY2l0ZDRrNzJoMDA3cDJvcDdxdXVsdTR3bSJ9.qSu4wFJlTpzGaBaxrs2sMA';
+var dataset = 'citdwsmsa007846o5n1ff2zs9';
+var DATASETS_BASE = 'https://api.mapbox.com/datasets/v1/theplanemad/' + dataset + '/';
+var mapboxAccessDatasetToken = 'sk.eyJ1IjoidGhlcGxhbmVtYWQiLCJhIjoiY2lyN2RobWgyMDAwOGlrbWdkbWp2cWdjNiJ9.AnPKx0Iqk-uzARdoOthoFg';
 var mapbox = new MapboxClient(mapboxAccessDatasetToken);
 
 var reviewer;
@@ -24,6 +24,7 @@ map.addControl(new mapboxgl.Navigation());
 
 
 // Layer for review markers
+
 var overlayDataSource = new mapboxgl.GeoJSONSource({
     data: {}
 });
@@ -38,8 +39,7 @@ var overlayData = {
     },
     'paint': {
         'circle-radius': 15,
-        'circle-color': '#5deb5e',
-        'circle-blur': .9
+        'circle-color': 'blue'
     }
 };
 

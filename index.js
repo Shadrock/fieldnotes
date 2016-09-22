@@ -1,7 +1,7 @@
 var MapboxClient = require('mapbox/lib/services/datasets');
-var dataset = 'citd4ic0i006v2smigzc46pyh';
-var DATASETS_BASE = 'https://api.mapbox.com/datasets/v1/planemad/' + dataset + '/';
-var mapboxAccessDatasetToken = 'sk.eyJ1IjoicGxhbmVtYWQiLCJhIjoiY2l0ZDRrNzJoMDA3cDJvcDdxdXVsdTR3bSJ9.qSu4wFJlTpzGaBaxrs2sMA';
+var dataset = 'citdwsmsa007846o5n1ff2zs9';
+var DATASETS_BASE = 'https://api.mapbox.com/datasets/v1/theplanemad/' + dataset + '/';
+var mapboxAccessDatasetToken = 'sk.eyJ1IjoidGhlcGxhbmVtYWQiLCJhIjoiY2lyN2RobWgyMDAwOGlrbWdkbWp2cWdjNiJ9.AnPKx0Iqk-uzARdoOthoFg';
 var mapbox = new MapboxClient(mapboxAccessDatasetToken);
 
 var reviewer;
@@ -23,6 +23,7 @@ map.addControl(new mapboxgl.Navigation());
 
 
 // Layer for review markers
+
 var overlayDataSource = new mapboxgl.GeoJSONSource({
     data: {}
 });
@@ -37,8 +38,7 @@ var overlayData = {
     },
     'paint': {
         'circle-radius': 15,
-        'circle-color': '#5deb5e',
-        'circle-blur': .9
+        'circle-color': 'blue'
     }
 };
 
