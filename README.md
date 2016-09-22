@@ -19,3 +19,8 @@ A map tool to easily corwdsource notes from the field.
 You will need node installed.
 - Clone the repo and `cd`
 - `npm install && npm start`
+
+### Components
+- [Mapbox datasets API](https://www.mapbox.com/studio/datasets/) for storing the data
+- [Mapbox Studio](https://www.mapbox.com/studio) to style the basemap
+- [Mapbox GL](https://www.mapbox.com/mapbox-gl-js/) to render and interact with the map in the browswer
