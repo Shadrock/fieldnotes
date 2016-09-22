@@ -14,8 +14,7 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/planemad/cip0m8hzf0003dhmh432q7g2k', //stylesheet location
     center: [4.3618,50.8480], // starting position
     zoom: 16, // starting zoom
-    hash: true,
-    attributionControl: false
+    hash: true
 });
 
 var geolocate = map.addControl(new mapboxgl.Geolocate({
@@ -50,8 +49,6 @@ map.on('style.load', function(e) {
 
 
     function init() {
-
-        addGeolocationMarker();
 
         map.addSource('overlayDataSource', overlayDataSource);
         map.addLayer(overlayData);
@@ -172,61 +169,6 @@ map.on('style.load', function(e) {
     }
 
 });
-
-// Toggle visibility of a layer
-function toggle(id) {
-    var currentState = map.getLayoutProperty(id, 'visibility');
-    var nextState = currentState === 'none' ? 'visible' : 'none';
-    map.setLayoutProperty(id, 'visibility', nextState);
-}
-
-// Toggle a set of filters for a set of layers
-function toggleLayerFilters(layerItems, filterItem) {
-
-    for (var i in layerItems) {
-        for (var j in toggleLayers[layerItems[i]].layers) {
-
-            var existingFilter = map.getFilter(toggleLayers[layerItems[i]].layers[j]);
-
-            // Construct and add the filters if none exist for the layers
-            if (typeof existingFilter == 'undefined') {
-                map.setFilter(toggleLayers[layerItems[i]].layers[j], toggleFilters[filterItem].filter);
-            } else {
-                // Not implemented
-                var newFilter = mergeLayerFilters(existingFilter, toggleFilters[filterItem].filter);
-                map.setFilter(toggleLayers[layerItems[i]].layers[j], newFilter);
-                // console.log(newFilter);
-            }
-
-        }
-    }
-}
-
-function addGeolocationMarker() {
-    map.addSource('single-point', {
-        "type": "geojson",
-        "data": {
-            "type": "FeatureCollection",
-            "features": []
-        }
-    });
-
-    map.addLayer({
-        "id": "point",
-        "source": "single-point",
-        "type": "circle",
-        "paint": {
-            "circle-radius": 10,
-            "circle-color": "#007cbf"
-        }
-    });
-
-    // Listen for the `geocoder.input` event that is triggered when a user
-    // makes a selection and add a marker that matches the result.
-    geolocate.on('result', function(ev) {
-        map.getSource('single-point').setData(ev.result.geometry);
-    });
-}
 
 },{"mapbox/lib/services/datasets":11}],2:[function(require,module,exports){
 // http://wiki.commonjs.org/wiki/Unit_Testing/1.0
