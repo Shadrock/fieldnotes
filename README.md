@@ -21,6 +21,7 @@ You will need node installed.
 - `npm install && npm start`
 
 ### Components
+- [OpenStreetMap Project](http://osm.org) for the base map data.
 - [Mapbox datasets API](https://www.mapbox.com/studio/datasets/) for storing the data
 - [Mapbox Studio](https://www.mapbox.com/studio) to style the basemap
 - [Mapbox GL](https://www.mapbox.com/mapbox-gl-js/) to render and interact with the map in the browswer
