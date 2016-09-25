@@ -11,7 +11,7 @@ var _tmp = {};
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZHJvY2siLCJhIjoidGdncWhxNCJ9.nvqdA0ac5B3z4ILLtrkU0g';
 var map = new mapboxgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/shadrock/citflgzh600122invf52ewod5', //stylesheet location
+    style: 'mapbox://styles/mapbox/dark-v9', //stylesheet location
     center: [110.429,-6.972], // starting position
     zoom: 18, // starting zoom
     hash: true
