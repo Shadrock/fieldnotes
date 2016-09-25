@@ -13,7 +13,7 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/shadrock/citflgzh600122invf52ewod5', //stylesheet location
     center: [110.429,-6.972], // starting position
-    zoom: 16, // starting zoom
+    zoom: 18, // starting zoom
     hash: true
 });
 
