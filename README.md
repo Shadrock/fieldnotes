@@ -1,6 +1,5 @@
 # Fieldnotes
-![]()
-A map tool to easily corwdsource notes from the field.
+A map tool to easily corwdsource notes from the field. This fork has a [Github demonstration page here](https://shadrock.github.io/fieldnotes). 
 
 ## Features
 - Customize and deploy the entire tool for a reporting project within minutes
