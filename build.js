@@ -2,7 +2,7 @@
 var MapboxClient = require('mapbox/lib/services/datasets');
 var dataset = 'citihp1st00133xpdri070cr8';
 var DATASETS_BASE = 'https://api.mapbox.com/datasets/v1/shadrock/' + dataset + '/';
-var mapboxAccessDatasetToken = 'sk.eyJ1Ijoic2hhZHJvY2siLCJhIjoiY2l0aWk3MmFkMDAxaTN4bGl5ZnM3M3FibSJ9.oPbj9XWA3z76YZESTroCsg';
+var mapboxAccessDatasetToken = 'sk.eyJ1Ijoic2hhZHJvY2siLCJhIjoiY2l0aWs4djc5MDAxbjRncW5lYXp0bXI4bSJ9.VYKEywW3iCDQ_XQHpKlHXA';
 var mapbox = new MapboxClient(mapboxAccessDatasetToken);
 
 var reviewer;
